@@ -23,14 +23,34 @@
         <a class="header-logo link" href="./index.html"> <span class="logo-accent">Web</span>Studio </a>
         <nav>
           <ul class="main-nav list">
-            <li class="item"><a class="main-nav-link link active" href="./index.html">Студія</a></li>
-            <li class="item"><a class="main-nav-link link" href="./portfolio.html">Портфоліо</a></li>
-            <li class="item"><a class="main-nav-link link" href="#">Контакти</a></li>
+            <li class="item">
+              <a 
+                class="main-nav-link link current active" 
+                href="./index.html">
+                Студія
+              </a>
+            </li>
+            <li class="item">
+              <a 
+                class="main-nav-link link" 
+                href="./portfolio.html">
+                Портфоліо
+              </a>
+            </li>
+            <li class="item">
+              <a 
+                class="main-nav-link link" 
+                href="#">
+                Контакти
+              </a>
+            </li>
           </ul>
         </nav>
         <ul class="contact list">
           <li class="item">
-            <a class="contact-item link" href="milto:info@devstudio.com">
+            <a 
+              class="contact-item link" 
+              href="milto:info@devstudio.com">
               <svg class="contact-icon" width="16" height="12">
                 <use href="./images/icons.svg#mail"></use>
               </svg>
@@ -38,7 +58,9 @@
             </a>
           </li>
           <li class="item">
-            <a class="contact-item link" href="tel:+380961111111">
+            <a 
+              class="contact-item link" 
+              href="tel:+380961111111">
               <svg class="contact-icon" width="10" height="16">
                 <use href="./images/icons.svg#tel"></use>
               </svg>
@@ -52,7 +74,17 @@
       <section class="section hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero-btn" type="button">Замовити послугу</button>
+          <button class="hero-btn" type="button" data-modal-open>Замовити послугу</button>
+        </div>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="modal-btn" type="button" data-modal-close>
+              <svg class="modal-btn-icon" width="11" height="11">
+                <use href="./images/icons.svg#Vector">
+                </use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
       <section class="section">
@@ -111,31 +143,43 @@
           <h2 class="subtitle">Чим ми займаємося</h2>
           <ul class="work-list list">
             <li class="item">
-              <img
-                class="work-item"
-                src="./images/page-1/work-3/box1.jpg"
-                alt="Десктопні додатки"
-                width="370"
-                height="294"
-              />
+              <div class="work-meta"> 
+                <img
+                  class="work-info"
+                  src="./images/page-1/work-3/box1.jpg"
+                  alt="Десктопні додатки"
+                  width="370"
+                  height="294"
+                />
+                <p class="work-txt">Десктопні додатки</p>
+              </div>
+               
             </li>
             <li class="item">
-              <img
-                class="work-item"
-                src="./images/page-1/work-3/box2.jpg"
-                alt="Мобільні додатки"
-                width="370"
-                height="294"
-              />
+              <div class="work-meta">
+                <img
+                  class="work-item"
+                  src="./images/page-1/work-3/box2.jpg"
+                  alt="Мобільні додатки"
+                  width="370"
+                  height="294"
+                />
+                <p class="work-txt">Мобільні додатки</p>
+              </div>
+              
             </li>
             <li class="item">
-              <img
-                class="work-item"
-                src="./images/page-1/work-3/box3.jpg"
-                alt="Дизайнерські рішення"
-                width="370"
-                height="294"
-              />
+              <div class="work-meta">
+                <img
+                  class="work-item"
+                  src="./images/page-1/work-3/box3.jpg"
+                  alt="Дизайнерські рішення"
+                  width="370"
+                  height="294"
+                />
+                <p class="work-txt">Дизайнерські рішення</p>
+              </div>
+              
             </li>
           </ul>
         </div>
@@ -584,5 +628,6 @@
         </ul>  
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
