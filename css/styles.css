@@ -235,7 +235,7 @@ img {
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
 
-  transition: visibility 2000ms, opasity 2000ms;
+  transition: visibility 2000ms cubic-bezier(0.4, 0, 0.2, 1), opacity 2000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   width: 528px;
@@ -326,21 +326,19 @@ img {
 .work-txt {
   width: 370px;
   height: 70px;
-  padding-top: 27px;
-  padding-bottom: 27px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 700;
-  font-size: 14px;
   line-height: calc(16 / 14);
   text-align: center;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--whaite-txt-color);
   background-color: rgba(47, 48, 58, 0.8);
 
   position: absolute;
   bottom: 0;
-  left: 0;
+  
 }
 .team {
   background-color: var(--section-bg-color);
@@ -643,6 +641,7 @@ transition-property: box-shadow;
   letter-spacing: 0.03em;
   color: var(--whaite-txt-color);
 }
-.portfolio-wrap:hover .overley {
+.portfolio-wrap:hover .overley,
+.portfolio-wrap:focus .overley{
   transform: translateY(0);
 }
